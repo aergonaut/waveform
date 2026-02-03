@@ -8,10 +8,10 @@
     "preview": "vite preview",
     "type-check": "tsc --noEmit"
   },
-  "keywords": [],
+  "keywords": ["audio", "visualizer", "music", "microphone", "web-audio"],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "An iTunes-style audio visualizer that responds to microphone input in real-time",
   "dependencies": {
     "meyda": "^5.6.3",
     "three": "^0.182.0"

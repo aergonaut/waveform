@@ -97,25 +97,52 @@ canvas {
   min-height: 1.5rem;
 }
 
-.controls {
+.footer {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  z-index: 100;
+  z-index: 1100;
   background: rgba(0, 0, 0, 0.7);
-  padding: 1rem;
+  padding: 1rem 1.25rem;
   border-radius: 10px;
   backdrop-filter: blur(10px);
-  transition: opacity 0.3s ease;
-}
-
-.controls.hidden {
-  opacity: 0;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0;
 }
 
 .control-hint {
-  font-size: 0.9rem;
   color: #aaa;
+  display: inline;
+}
+
+.control-hint.hidden {
+  display: none;
+}
+
+.separator {
+  color: #666;
+  margin: 0 0.5rem;
+}
+
+.github-link {
+  color: #aaa;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.github-link:hover {
+  color: #fff;
+}
+
+.github-link svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
 }
 
 .help-overlay {

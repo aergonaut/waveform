@@ -1,5 +1,5 @@
 export class Controls {
-  private controlsElement: HTMLElement;
+  private helpHintElement: HTMLElement;
   private helpOverlay: HTMLElement;
   private isHelpVisible = false;
 
@@ -13,7 +13,7 @@ export class Controls {
     this.onVisualizerChange = onVisualizerChange;
     this.onColorSchemeChange = onColorSchemeChange;
 
-    this.controlsElement = document.getElementById('controls')!;
+    this.helpHintElement = document.querySelector('.control-hint')!;
     this.helpOverlay = document.getElementById('help-overlay')!;
 
     this.setupKeyboardControls();
@@ -51,10 +51,10 @@ export class Controls {
   }
 
   show(): void {
-    this.controlsElement.classList.remove('hidden');
+    this.helpHintElement.classList.remove('hidden');
   }
 
   hide(): void {
-    this.controlsElement.classList.add('hidden');
+    this.helpHintElement.classList.add('hidden');
   }
 }

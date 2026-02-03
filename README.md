@@ -1,4 +1,4 @@
-# Audio Visualizer
+# Waveform
 
 An iTunes-style audio visualizer that responds to microphone input in real-time.
 
