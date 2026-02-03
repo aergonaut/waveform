@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Visualizer</title>
+</head>
+<body>
+  <canvas id="canvas2d"></canvas>
+  <canvas id="webgl"></canvas>
+
+  <div id="permission-prompt" class="permission-prompt">
+    <div class="prompt-content">
+      <h1>Audio Visualizer</h1>
+      <p>This visualization responds to your microphone input.</p>
+      <button id="start-button" class="start-button">Start Visualization</button>
+      <p class="error-message" id="error-message"></p>
+    </div>
+  </div>
+
+  <div id="controls" class="controls hidden">
+    <div class="control-hint">Press H for help</div>
+  </div>
+
+  <div id="help-overlay" class="help-overlay hidden">
+    <div class="help-content">
+      <h2>Keyboard Shortcuts</h2>
+      <div class="shortcuts">
+        <div class="shortcut-group">
+          <h3>Visualizations</h3>
+          <p><kbd>1</kbd> Frequency Bars</p>
+          <p><kbd>2</kbd> Particle System</p>
+          <p><kbd>3</kbd> Waveform</p>
+        </div>
+        <div class="shortcut-group">
+          <h3>Color Schemes</h3>
+          <p><kbd>Q</kbd> Classic iTunes</p>
+          <p><kbd>W</kbd> Sunset</p>
+          <p><kbd>E</kbd> Matrix</p>
+          <p><kbd>R</kbd> Rainbow</p>
+          <p><kbd>T</kbd> Monochrome</p>
+        </div>
+        <div class="shortcut-group">
+          <h3>Controls</h3>
+          <p><kbd>H</kbd> Toggle Help</p>
+        </div>
+      </div>
+      <p class="help-close">Press <kbd>H</kbd> or <kbd>ESC</kbd> to close</p>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

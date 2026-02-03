@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#canvas2d {
+  z-index: 10;
+}
+
+#webgl {
+  z-index: 10;
+}
+
+.permission-prompt {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.permission-prompt.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.prompt-content {
+  text-align: center;
+  padding: 2rem;
+  max-width: 500px;
+}
+
+.prompt-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.prompt-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #aaa;
+}
+
+.start-button {
+  background: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 100%);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 1rem 3rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-weight: 600;
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+}
+
+.start-button:active {
+  transform: translateY(0);
+}
+
+.error-message {
+  color: #ef4444;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  min-height: 1.5rem;
+}
+
+.controls {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  transition: opacity 0.3s ease;
+}
+
+.controls.hidden {
+  opacity: 0;
+}
+
+.control-hint {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.help-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  transition: opacity 0.3s ease;
+}
+
+.help-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.help-content {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  padding: 3rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 700px;
+  width: 90%;
+}
+
+.help-content h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.shortcuts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.shortcut-group h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #8B5CF6;
+}
+
+.shortcut-group p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+kbd {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.help-close {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+}
