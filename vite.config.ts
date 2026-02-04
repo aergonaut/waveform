@@ -1,12 +1,13 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
+  base: "/waveform/",
   server: {
     port: 5173,
-    host: true
+    host: true,
   },
   build: {
-    target: 'es2020',
-    minify: 'esbuild'
-  }
-})
+    target: "es2020",
+    minify: "esbuild",
+  },
+});

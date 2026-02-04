@@ -6,9 +6,16 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "deploy": "npm run build && gh-pages -d dist"
   },
-  "keywords": ["audio", "visualizer", "music", "microphone", "web-audio"],
+  "keywords": [
+    "audio",
+    "visualizer",
+    "music",
+    "microphone",
+    "web-audio"
+  ],
   "author": "",
   "license": "ISC",
   "description": "An iTunes-style audio visualizer that responds to microphone input in real-time",
